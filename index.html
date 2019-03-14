@@ -12,13 +12,36 @@
   <body>
 	<script>
 		function one(){
-			var NAME = document.getElementById("showhide");
-			NAME.className = "ui disabled move reveal";
+			var home = document.getElementById("home");
+			var about = document.getElementById("about");
+			var team = document.getElementById("team");
+      console.log("one");
+			//var NAME = document.getElementById("home");
+			home.className = "ui disabled fade reveal";
+			about.className = "hidden content ui active fade reveal";
+			team.className = "hidden content ui active fade reveal";
 		}
-		
-		function two(){
-			var NAME = document.getElementById("showhide");
-			NAME.className = "ui active move reveal";
+
+    function two(){
+      var home = document.getElementById("home");
+			var about = document.getElementById("about");
+			var team = document.getElementById("team");
+      console.log("two");
+			//var NAME = document.getElementById("home");
+			home.className = "ui active fade reveal";
+			about.className = "hidden content ui disabled fade reveal";
+			team.className = "hidden content ui active fade reveal";
+		}
+
+    function three(){
+      var home = document.getElementById("home");
+			var about = document.getElementById("about");
+			var team = document.getElementById("team");
+      console.log("three");
+			//var NAME = document.getElementById("home");
+			home.className = "ui active fade reveal";
+			about.className = "hidden content ui active fade reveal";
+			team.className = "hidden content ui disabled fade reveal";
 		}
 	</script>
     <div class="ui top fixed menu">
@@ -26,19 +49,45 @@
         <img src="./src/img/logo.png">
       </div>
       <a class="item" onclick="one();">Inicio</a>
-      <a class="item" onclick="two();">Click me!</a>
+      <a class="item" onclick="two();">About</a>
+      <a class="item" onclick="three();">Team</a>
     </div>
 
-    <div id="showhide" class="ui disabled move reveal">
+    <div id="home" class="ui disabled fade reveal">
       <div style="background-color:red; width:100vw; height:100vh;" class="visible content">
+        <h1 style="padding-top:100px;padding-left:100px;color:yellow;" >CLICK ME!!!</h1>
+      </div>
+      <div id="about" class="hidden content ui active fade reveal">
+        <div style="background-color:yellow; width:100vw; height:100vh;" class="visible content">
+          <h1 style="padding-top:100px;padding-left:100px;color:yellow;" >CLICK ME!!!</h1>
+        </div>
+        <div id="team" class="hidden content ui active fade reveal">
+          <div style="background-color:black; width:100vw; height:100vh;" class="visible content">
+            <h1 style="padding-top:100px;padding-left:100px;color:yellow;" >CLICK ME!!!</h1>
+          </div>
+          <!-- <div style="background-color:yellow; width:100vw; height:100vh;" class="hidden content">
+            <h1 style="padding-top:100px;padding-left:100px;color:red; " >ARRIBA ESPAÑA!!!</h1>
+          </div> -->
+        </div>
+        <!-- <div style="background-color:yellow; width:100vw; height:100vh;" class="hidden content">
+          <h1 style="padding-top:100px;padding-left:100px;color:red; " >ARRIBA ESPAÑA!!!</h1>
+        </div> -->
+      </div>
+      <!-- <div style="background-color:yellow; width:100vw; height:100vh;" class="hidden content">
+        <h1 style="padding-top:100px;padding-left:100px;color:red; " >ARRIBA ESPAÑA!!!</h1>
+      </div> -->
+    </div>
+
+    <!-- <div id="team" class="ui active move reveal">
+      <div style="background-color:yellow; width:100vw; height:100vh;" class="visible content">
         <h1 style="padding-top:100px;padding-left:100px;color:yellow;" >CLICK ME!!!</h1>
       </div>
       <div style="background-color:yellow; width:100vw; height:100vh;" class="hidden content">
         <h1 style="padding-top:100px;padding-left:100px;color:red; " >ARRIBA ESPAÑA!!!</h1>
       </div>
-    </div>
-	
-	
+    </div> -->
+
+
 
   </body>
 </html>
